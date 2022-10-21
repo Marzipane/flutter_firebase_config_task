@@ -11,15 +11,24 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   final FirebaseRemoteConfig _remoteConfig = FirebaseRemoteConfig.instance;
+  bool _isLoading = true;
 
   void _initConfig() async {
-    await _remoteConfig.setConfigSettings(RemoteConfigSettings(
-      // cache refresh time
-      fetchTimeout: const Duration(seconds: 1),
-      // a fetch will wait up to 10 seconds before timing out
-      minimumFetchInterval: const Duration(seconds: 10),
-    ));
-    await _remoteConfig.fetchAndActivate();
+    try {
+      await _remoteConfig.setConfigSettings(RemoteConfigSettings(
+        // cache refresh time
+        fetchTimeout: const Duration(seconds: 1),
+        // a fetch will wait up to 10 seconds before timing out
+        minimumFetchInterval: const Duration(seconds: 10),
+      ));
+      await _remoteConfig.fetchAndActivate();
+
+      setState(() {
+        _isLoading = false;
+      });
+    } catch (e) {
+      debugPrint(e.toString());
+    }
   }
 
   @override
@@ -30,12 +39,16 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        (() {
-          return WebViewPage(url: _remoteConfig.getString('link'));
-        })(),
-      ],
-    );
+    if (_remoteConfig.getString('link') != "") {
+      if (_isLoading) {
+        return const Scaffold(body: Center(child: CircularProgressIndicator()));
+      } else {
+        return WebViewPage(
+          url: _remoteConfig.getString('link'),
+        );
+      }
+    }
+
+    return const Text('empty');
   }
 }

@@ -12,12 +12,6 @@ class StartPage extends StatefulWidget {
 class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Body(),
-        ),
-      ),
-    );
+    return const Body();
   }
 }

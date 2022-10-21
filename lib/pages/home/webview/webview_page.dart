@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/body.dart';
 
 class WebViewPage extends StatelessWidget {
   const WebViewPage({super.key, required this.url});
@@ -6,8 +7,6 @@ class WebViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: WebViewPage(url: url),
-    );
+    return WebViewExample(url: url);
   }
 }
