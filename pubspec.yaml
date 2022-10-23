@@ -35,6 +35,7 @@ dependencies:
   webview_flutter: ^3.0.4
   flutter:
     sdk: flutter
+  internet_connection_checker: ^1.0.0+1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
