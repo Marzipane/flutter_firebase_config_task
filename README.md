@@ -1,4 +1,4 @@
-# flutter_firebase_config
+# flutter_firebase_config_task
 
 A new Flutter project that is dedicated to task related with Firebase Remote Config.
 
