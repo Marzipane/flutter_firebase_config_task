@@ -1,6 +1,6 @@
 # flutter_firebase_config
 
-A new Flutter project.
+A new Flutter project that is dedicated to task related with Firebase Remote Config.
 
 ## Getting Started
 

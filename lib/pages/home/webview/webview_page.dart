@@ -7,6 +7,6 @@ class WebViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WebViewExample(url: url);
+    return WebViewRoot(url: url);
   }
 }
