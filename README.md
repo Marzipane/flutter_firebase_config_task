@@ -2,15 +2,15 @@
 
 A new Flutter project that is dedicated to task related with Firebase Remote Config.
 
-## Getting Started
+## Project in work
+1. When there is a link in JSON. / Когда в JSON есть ссылка.
+https://user-images.githubusercontent.com/84333332/197504122-7d369378-50cf-48ff-84f7-f35013a33e73.mov
 
-This project is a starting point for a Flutter application.
+2. When there is "broken-link" in JSON. / Когда в JSON сссылки нету или она "сломаная".
+https://user-images.githubusercontent.com/84333332/197504671-45cd8844-e743-4b82-9428-33313b0e07f6.mov
 
-A few resources to get you started if this is your first Flutter project:
+3. When there is no internet connection / Когда нету соединения с интернетом.
+https://user-images.githubusercontent.com/84333332/197505087-ab108d32-557b-40ad-83d6-5914fb7138af.mov
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
